@@ -1,0 +1,55 @@
+composer create-project laravel/laravel store
+
+cls (for clear screen)
+
+cd store
+
+php artisan serve
+ 
+php artisan make:controller STOREController
+
+php artisan make:model STORE
+
+
+
+MIGRATION
+
+php artisan make:migration create_profile_table
+php artisan migrate
+php artisan migrate:reset
+php artisan migrate:rollback --step 3
+php artisan migrate --path=/database/migrations/2020_09_21_141958_create_test5_table.php
+php artisan migrate:refresh
+
+
+
+API
+
+php artisan install:api
+
+
+
+
+ 
+
+
+$validated = $request->validate([
+        'name' => 'sometimes|string|max:255',
+        'email' => 'sometimes|email|unique:users,email,' . $user->id,
+    ]);
+
+    // Update only provided fields
+    $user->update($validated)
+
+    Variable Types :
+$var = 22 
+$var = "ee43" 
+$var = ["234", "sdfds"]
+$var = object
+$var = new ClassName();
+Thananjeyan Gl
+12:34 PM
+$students[0]
+$object->variable
+$object->method()
+Maths::method();
